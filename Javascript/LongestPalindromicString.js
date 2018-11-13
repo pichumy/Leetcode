@@ -1,3 +1,5 @@
+// Leetcode is pretty stringest on how fast the program must run... Need to use dynamic programming for this solution. This does not use the even faster 
+// Manacher's solution. 
 var longestPalindrome = function(s) {
     // Empty string input 
     if(s.length === 0){
