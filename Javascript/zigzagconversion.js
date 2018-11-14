@@ -1,3 +1,11 @@
+/* Explanation:
+  After drawing out how this problem works, it's surprisingly simple.
+  Essentially, the row that a certain letter should be put in follows a certain order.
+  In the case of PAYPALISHIRING and numRows = 3, the pattern would be
+  0 1 2 1 0 1 2 1 0 1 2 1 0 1
+  P A Y P A L I S H I R I N G
+  where the numbers above each letter indicate which row it goes into. Once you figure out this part, the algorithmn is simple.
+*/
 var convert = function(s, numRows) {
     // Empty string case.
     if(s.length === 0){
@@ -25,7 +33,7 @@ var convert = function(s, numRows) {
         if(currentRow === 0 || currentRow === numRows - 1){
             changeBy = changeBy * -1;
         }
-        currentRow = currentRow + changeBy; 
+        currentRow = currentRow + changeBy;
     }
     let output = "";
     for(let i = 0; i < numRows; i++){
